@@ -76,5 +76,5 @@ server.listen(port, (err)=>{
         console.log(err);
         return false;
     }
-    console.log("Port is running");
+    console.log("Stickers port is running");
 })
