@@ -1,5 +1,5 @@
+const port = process.env.PORT || 10000;
 const server = require("http").Server();
-const port = 10001 || process.env.PORT;
 
 var io = require("socket.io")(server);
 io.origins('*:*');
