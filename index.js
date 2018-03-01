@@ -2,6 +2,7 @@ const port = process.env.PORT || 10001;
 const server = require("http").Server();
 
 var io = require("socket.io")(server);
+io.origins('*:*');
 //var allUsers =[];
 //var allUsers1 =[];
 //var allUsers2 = [];
