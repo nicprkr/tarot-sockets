@@ -36,5 +36,5 @@ server.listen(port, (err)=>{
         return false;
     }
     
-    console.log("socket port is running!");
+    console.log("chat socket port is running!");
 })
