@@ -3,9 +3,7 @@ const server = require("http").Server();
 
 var io = require("socket.io")(server);
 io.origins('*:*');
-//var allUsers =[];
-//var allUsers1 =[];
-//var allUsers2 = [];
+
 var allusers = {};
 var allstickers = {};
 
@@ -33,19 +31,7 @@ io.on("connection", function(socket){
         allusers[data].push(socket.id);
         io.to(data).emit("userjoined", allusers[data]);
         io.to(data).emit("newsticker", allstickers[data]);
-        
-//        if(data == "room1"){
-//            allUsers1.push(socket.id)
-//            io.to(data).emit("userjoined", allUsers1)
-//        } else if (data == "room2"){
-//            allUsers2.push(socket.id)
-//            io.to(data).emit("userjoined", allUsers2)
-//        }
-    });
-    
-//    io.emit("userjoined", allUsers);
-    
-//    socket.emit("yourid", socket.id);
+
     
     socket.on("mymove", function(data){
         socket.to(this.myRoom).emit("newmove", data);
@@ -63,9 +49,7 @@ io.on("connection", function(socket){
                 allusers[this.myRoom].splice(index, 1);
                 io.to(this.myRoom).emit("userjoined", allusers[this.myRoom]);
         }
-        /*var index = allUsers.indexOf(socket.id);
-        allUsers.splice(index, 1);
-        io.emit("userjoined", allUsers);*/
+
     })
 });
 
