@@ -52,6 +52,8 @@ io.on("connection", function(socket){
 
     })
 });
+    
+});
 
 server.listen(port, (err)=>{
     if(err){
@@ -59,4 +61,5 @@ server.listen(port, (err)=>{
         return false;
     }
     console.log("Stickers port is running");
-})
+});
+    
