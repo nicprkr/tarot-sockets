@@ -1,5 +1,5 @@
 const port = process.env.PORT || 10002;
-const server = require("https").Server();
+const server = require("http").Server();
 
 var io = require("socket.io")(server);
 io.origins('*:*');
