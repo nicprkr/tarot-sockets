@@ -2,7 +2,10 @@ const port = process.env.PORT || 10002;
 const server = require("http").Server();
 
 var io = require("socket.io")(server);
+var cors = require('cors');
 io.origins('*:*');
+
+app.use(cors());
 
 var questions = [];
 var answers = [];
@@ -36,4 +39,8 @@ server.listen(port, (err)=>{
     }
     
     console.log("socket port is running!");
+})
+
+server.listen(3000, function () {
+  console.log('CORS-enabled web server listening on port 3000')
 })
