@@ -1,7 +1,8 @@
-const port = process.env.PORT || 10002;
+const port = process.env.PORT || 10003;
 const server = require("http").Server();
 
 var io = require("socket.io")(server);
+io.origins('*:*');
 
 var questions = [];
 var answers = [];
