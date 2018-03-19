@@ -1,4 +1,4 @@
-const port = process.env.PORT || 10001;
+const port = process.env.PORT || 10005;
 const server = require("http").Server();
 
 var io = require("socket.io")(server);
@@ -55,7 +55,7 @@ io.on("connection", function(socket){
     
     socket.on("disconnect", function(){
         
-        var index = allusers[this.myRoom].indexOf(socket.id);
+   /*     var index = allusers[this.myRoom].indexOf(socket.id);
         allusers[this.myRoom].splice(index, 1);
         io.to(this.myRoom).emit("userjoined", allusers[this.myRoom]);
         
@@ -64,7 +64,7 @@ io.on("connection", function(socket){
                 allusers[this.myRoom].indexOf(socket.id);
                 allusers[this.myRoom].splice(index, 1);
                 io.to(this.myRoom).emit("userjoined", allusers[this.myRoom]);
-        }
+        }*/
         /*var index = allUsers.indexOf(socket.id);
         allUsers.splice(index, 1);
         io.emit("userjoined", allUsers);*/
