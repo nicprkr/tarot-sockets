@@ -1,16 +1,23 @@
 {
-  "name": "sockets",
+  "name": "tarot-sockets",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "card-socket.js",
+  "dependencies": {
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon card-sockets.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicprkr/tarot-sockets.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.2",
-    "socket.io": "^2.0.4"
-  }
+  "bugs": {
+    "url": "https://github.com/nicprkr/tarot-sockets/issues"
+  },
+  "homepage": "https://github.com/nicprkr/tarot-sockets#readme"
 }

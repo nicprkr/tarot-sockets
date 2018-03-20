@@ -2,6 +2,7 @@ const server = require("http").Server();
 const port = process.env.PORT || 10000;
 
 var io = require("socket.io")(server);
+io.origins('*:*');
 
 io.on("connection", function(socket){
     console.log("user has connected");
