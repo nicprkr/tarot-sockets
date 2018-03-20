@@ -24,4 +24,4 @@ server.listen(port, (err)=>{
         return false;
     }
     console.log("Socket port is running");
-})
+});
