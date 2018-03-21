@@ -8,8 +8,10 @@ io.on("connection", function(socket){
     
     socket.on("addCard", function(data){
         console.log("card was dealt" + data);
-        io.emit("newCardMsg", "you have a new card waiting");
+        io.emit("readerCards", data);
     })
+    
+    
     
     socket.on("disconnect", function(){
         console.log("User has disconnected");
