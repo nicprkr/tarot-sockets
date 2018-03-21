@@ -11,6 +11,7 @@ io.on("connection", function(socket){
     console.log("Connection");
     
     socket.on("stick", function(data){
+        //console.log("sticker");
         allstickers[this.myRoom].push(data);
         io.to(this.myRoom).emit("newsticker",
             allstickers[this.myRoom]);
